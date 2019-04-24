@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".Activity.CadastroVagaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CADASTRO DE VAGAS"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imagem1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/semimagem"
+            android:text="Upload Imagem"
+            android:layout_marginRight="20dp"/>
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/endereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Endereço"/>
+
+    <EditText
+        android:id="@+id/pontoReferencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ponto de Referencia"/>
+
+    <EditText
+        android:id="@+id/quantVagas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vagas Disponiveis"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Republica: "/>
+
+    <RadioGroup
+        android:id="@+id/tipoRepublica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/repF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Republica Feminina"/>
+
+        <RadioButton
+            android:id="@+id/repMasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Republica Masculina"/>
+
+        <RadioButton
+            android:id="@+id/repMista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Republica Mista"
+            android:layout_marginBottom="20dp"/>
+    </RadioGroup>
+
+
+
+    <Button
+        android:id="@+id/cadastroVaga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar Vaga"/>
+
+
+</LinearLayout>
