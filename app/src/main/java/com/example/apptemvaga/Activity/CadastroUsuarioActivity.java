@@ -71,7 +71,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         });
     }
 
-    private void cadastrarUsuario(final Usuario user){
+    public boolean cadastrarUsuario(final Usuario user){
         autenticacao = ConfiguracaoFirebase.getFirebaseAuth();
         autenticacao.createUserWithEmailAndPassword(user.getEmail(), user.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -97,9 +97,10 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 }
             }
         });
+        return true;
     }
 
-    private boolean insereUser(Usuario user){
+    public boolean insereUser(Usuario user){
         try{
             reference = ConfiguracaoFirebase.getFirebase().child("usuarios");
             String key = reference.push().getKey();

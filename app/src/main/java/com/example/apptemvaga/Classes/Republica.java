@@ -10,7 +10,6 @@ public class Republica {
     private String keyRepublica;
 
 
-
     public String getKeyRepublica() {
         return keyRepublica;
     }
